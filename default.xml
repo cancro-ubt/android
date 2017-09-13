@@ -11,7 +11,7 @@
         revision="stable" />
 
   <remote  name="aosp"
-           fetch="https://android.googlesource.com"
+           fetch="https://aosp.tuna.tsinghua.edu.cn/"
            review="android-review.googlesource.com"
            revision="refs/tags/android-5.1.1_r26" />
 
@@ -23,7 +23,11 @@
 	fetch="http://github.com"
 	review="http://review.ubports.com"
 	revision="refs/heads/ubp-5.1" />
-	
+
+  <remote name="github"
+	fetch="http://github.com"
+	revision="refs/heads/cm-12.1" />
+
   <remote name="ab2ut"
 	fetch="http://github.com/ab2ut"
 	revision="refs/heads/ubp-5.1" />
@@ -38,12 +42,19 @@
   <default remote="phablet"
            sync-j="6" />
 
+<project path="device/xiaomi/cancro" name="kuailexs/android_device_xiaomi_cancro" remote="github" />
+<project path="kernel/xiaomi/cancro" name="kuailexs/android_kernel_xiaomi_cancro" remote="github"  clone-depth="1" />
+<project path="device/qcom/sepolicy" name="CyanogenMod/android_device_qcom_sepolicy" remote="github"  clone-depth="1" />
+<project path="device/qcom/common" name="CyanogenMod/android_device_qcom_common" remote="github"  clone-depth="1" />
+<project path="vendor/xiaomi" name="TheMuppets/proprietary_vendor_xiaomi" remote="github"  clone-depth="1" />
+<project path="external/ant-wireless/antradio-library" name="CyanogenMod/android_external_ant-wireless_antradio-library" remote="github"  clone-depth="1" />
+
   <project path="build" name="ubports/android_build" groups="pdk,tradefed" remote="ubp" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="android_abi_cpp" groups="pdk" remote="cm" />
   <project path="bionic" name="ubports/android_bionic" groups="pdk" remote="ubp" revision="refs/heads/ubp-5.1.1" />
-  <project path="development" name="ubports/android_development" remote="ubp" />
+  <project path="development" name="ubports/android_development" remote="ubp"  clone-depth="1" />
   <project path="device-files" name="ubports/device-files" remote="ubp" />
   <project path="external/audioflingerglue" name="ubports/audioflingerglue" remote="ubp" />
 
@@ -122,7 +133,7 @@
   <project path="external/zlib" name="ubports/android_external_zlib" groups="pdk" remote="ubp" />
   <project path="external/zopfli" name="aosp/platform/external/zopfli" groups="pdk-cw-fs" />
   <project path="frameworks/av" name="ubports/android_frameworks_av" groups="pdk" remote="ubp" />
-  <project path="frameworks/base" name="ubports/android_frameworks_base" groups="pdk-cw-fs" remote="ubp" />
+  <project path="frameworks/base" name="ubports/android_frameworks_base" groups="pdk-cw-fs" remote="ubp"  clone-depth="1" />
   <project path="frameworks/native" name="ubports/android_frameworks_native" groups="pdk" remote="ubp" />
   <project path="frameworks/opt/emoji" name="android_frameworks_opt_emoji" groups="pdk-cw-fs" remote="cm" />
   <project path="hardware/akm" name="android_hardware_akm" remote="cm" />
@@ -187,13 +198,13 @@
   <project path="prebuilts/libs/libedit" name="aosp/platform/prebuilts/libs/libedit" groups="pdk-cw-fs" />
   <project path="prebuilts/maven_repo/android" name="aosp/platform/prebuilts/maven_repo/android" groups="pdk-cw-fs" />
   <project path="prebuilts/misc" name="aosp/platform/prebuilts/misc" groups="pdk,tradefed" />
-  <project path="prebuilts/ndk" name="aosp/platform/prebuilts/ndk" groups="pdk" />
+  <project path="prebuilts/ndk" name="aosp/platform/prebuilts/ndk" groups="pdk" clone-depth="1"/>
   <project path="prebuilts/python/darwin-x86/2.7.5" name="aosp/platform/prebuilts/python/darwin-x86/2.7.5" groups="darwin" />
   <project path="prebuilts/python/linux-x86/2.7.5" name="aosp/platform/prebuilts/python/linux-x86/2.7.5" groups="linux" />
   <project path="prebuilts/qemu-kernel" name="aosp/platform/prebuilts/qemu-kernel" groups="pdk" clone-depth="1" />
   <project path="prebuilts/tools" name="aosp/platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="aosp/platform/sdk" groups="pdk-cw-fs" revision="refs/heads/personal/w-ondra/phablet-5.1.1_r5" />
-  <project path="system/core" name="ubports/android_system_core" groups="pdk" remote="ubp" />
+  <project path="system/core" name="ubports/android_system_core" groups="pdk" remote="ubp"  clone-depth="1" />
   <project path="system/extras" name="ubports/android_system_extras" groups="pdk" remote="ubp" />
   <project path="system/keymaster" name="android_system_keymaster" groups="pdk" remote="cm" />
   <project path="system/media" name="android_system_media" groups="pdk" remote="cm" />
@@ -203,9 +214,9 @@
   <project path="system/vold" name="ubports/android_system_vold" groups="pdk" remote="ubp" />
   <project path="tools/external/fat32lib" name="aosp/platform/tools/external/fat32lib" groups="tools" />
 
-  <project path="vendor/cm" name="ubports/android_vendor_cm" remote="ubp" />
+  <project path="vendor/cm" name="ubports/android_vendor_cm" remote="ubp"  clone-depth="1" />
 
-  <project path="bootable/recovery" name="ubports/android_bootable_recovery" groups="pdk" remote="ubp" /> 
+  <project path="bootable/recovery" name="ubports/android_bootable_recovery" groups="pdk" remote="ubp"  clone-depth="1" /> 
 
   <project path="vendor/sony/system/timekeep" name="timekeep" remote="peat-psuwit" revision="ubuntu-touch" />
 
@@ -217,6 +228,7 @@
   <project path="external/gpg" name="aosp/platform/external/gpg" revision="refs/heads/master" />
   <project path="ubuntu/assets" name="ubuntu/assets" revision="refs/heads/master" />
   <project path="ubuntu/libhybris" name="libhybris" remote="launchpad" />
+  <project path="ubuntu/libhybris-prebuilt" name="ubuntu/libhybris-prebuilt" revision="refs/heads/personal/w-ondra/phablet-5.x" />
   <project path="ubuntu/platform-api" name="ubuntu/platform-api" revision="refs/heads/personal/w-ondra/phablet-5.x" />
   <project path="ubuntu/upstart-property-watcher" name="ubuntu/upstart-property-watcher" revision="refs/heads/personal/w-ondra/phablet-5.x" />
 
