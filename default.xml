@@ -41,7 +41,7 @@
 
   <default remote="phablet"
            sync-j="6" />
-
+ <project path="system/core" name="kuailexs/android_system_core"  remote="github" revision="refs/heads/ubp-5.1" clone-depth="1" />
 <project path="device/xiaomi/cancro" name="kuailexs/android_device_xiaomi_cancro" remote="github" />
 <project path="kernel/xiaomi/cancro" name="kuailexs/android_kernel_xiaomi_cancro" remote="github"  clone-depth="1" />
 <project path="device/qcom/sepolicy" name="CyanogenMod/android_device_qcom_sepolicy" remote="github"  clone-depth="1" />
@@ -204,7 +204,7 @@
   <project path="prebuilts/qemu-kernel" name="aosp/platform/prebuilts/qemu-kernel" groups="pdk" clone-depth="1" />
   <project path="prebuilts/tools" name="aosp/platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="aosp/platform/sdk" groups="pdk-cw-fs" revision="refs/heads/personal/w-ondra/phablet-5.1.1_r5" />
-  <project path="system/core" name="ubports/android_system_core" groups="pdk" remote="ubp"  clone-depth="1" />
+
   <project path="system/extras" name="ubports/android_system_extras" groups="pdk" remote="ubp" />
   <project path="system/keymaster" name="android_system_keymaster" groups="pdk" remote="cm" />
   <project path="system/media" name="android_system_media" groups="pdk" remote="cm" />
