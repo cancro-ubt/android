@@ -42,21 +42,23 @@
   <default remote="phablet"
            sync-j="6" />
 
- <project path="ubuntu/ubports-boot" name="kuailexs/ubports-boot" remote="ubp" revision="master" />
- <project path="tools/rootstock-ng" name="kuailexs/rootstock-ng" remote="ubp" revision="master"/>
- <project path="device-files" name="kuailexs/device-files" remote="ubp"  />
+  <project path="ubuntu/ubports-boot" name="kuailexs/ubports-boot" remote="ubp" revision="master" />
+  <project path="tools/rootstock-ng" name="kuailexs/rootstock-ng" remote="ubp" revision="master"/>
+  <project path="device-files" name="kuailexs/device-files" remote="ubp"  />
 
- <project path="system/core" name="kuailexs/android_system_core"  remote="ubp" clone-depth="1" />
-<project path="device/xiaomi/cancro" name="kuailexs/android_device_xiaomi_cancro" remote="github" revision="hybris-12.1" />
-<project path="kernel/xiaomi/cancro" name="kuailexs/android_kernel_xiaomi_cancro" remote="github" revision="hybris-12.1"  clone-depth="1" />
-<project path="device/qcom/sepolicy" name="CyanogenMod/android_device_qcom_sepolicy" remote="github"  clone-depth="1" />
-<project path="device/qcom/common" name="CyanogenMod/android_device_qcom_common" remote="github"  clone-depth="1" />
-<project path="vendor/xiaomi" name="TheMuppets/proprietary_vendor_xiaomi" remote="github"  clone-depth="1" />
-<project path="external/ant-wireless/antradio-library" name="CyanogenMod/android_external_ant-wireless_antradio-library" remote="github"  clone-depth="1" />
+  <project path="system/core" name="kuailexs/android_system_core"  remote="ubp" clone-depth="1" />
+  <project path="device/xiaomi/cancro" name="kuailexs/android_device_xiaomi_cancro" remote="github" revision="hybris-12.1" />
+  <project path="kernel/xiaomi/cancro" name="kuailexs/android_kernel_xiaomi_cancro" remote="github" revision="hybris-12.1"  clone-depth="1" />
+  <project path="vendor/xiaomi/cancro" name="kuailexs/proprietary_vendor_xiaomi_cancro" remote="github"  clone-depth="1" />
 
-  <project path="build" name="ubports/android_build" groups="pdk,tradefed" remote="ubp" >
+  <project path="build" name="kuailexs/android_build" groups="pdk,tradefed" remote="ubp" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
+
+  <project path="device/qcom/sepolicy" name="CyanogenMod/android_device_qcom_sepolicy" remote="github"  clone-depth="1" />
+  <project path="device/qcom/common" name="CyanogenMod/android_device_qcom_common" remote="github"  clone-depth="1" />
+  <project path="external/ant-wireless/antradio-library" name="CyanogenMod/android_external_ant-wireless_antradio-library" remote="github"  clone-depth="1" />
+
   <project path="abi/cpp" name="android_abi_cpp" groups="pdk" remote="cm" />
   <project path="bionic" name="ubports/android_bionic" groups="pdk" remote="ubp" revision="refs/heads/ubp-5.1.1" />
   <project path="development" name="ubports/android_development" remote="ubp"  clone-depth="1" />
