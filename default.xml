@@ -60,7 +60,6 @@
   <project path="abi/cpp" name="android_abi_cpp" groups="pdk" remote="cm" />
   <project path="bionic" name="ubports/android_bionic" groups="pdk" remote="ubp" revision="refs/heads/ubp-5.1.1" />
   <project path="development" name="ubports/android_development" remote="ubp"  clone-depth="1" />
-  <project path="device-files" name="ubports/device-files" remote="ubp" />
   <project path="external/audioflingerglue" name="ubports/audioflingerglue" remote="ubp" />
 
   <project path="external/aac" name="aosp/platform/external/aac" groups="pdk" />
