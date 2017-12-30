@@ -42,8 +42,8 @@
   <default remote="phablet"
            sync-j="6" />
  <project path="system/core" name="kuailexs/android_system_core"  remote="github" revision="refs/heads/ubp-5.1" clone-depth="1" />
-<project path="device/xiaomi/cancro" name="kuailexs/android_device_xiaomi_cancro" remote="github" />
-<project path="kernel/xiaomi/cancro" name="kuailexs/android_kernel_xiaomi_cancro" remote="github"  clone-depth="1" />
+<project path="device/xiaomi/cancro" name="kuailexs/android_device_xiaomi_cancro" remote="github" revision="hybris-12.1" />
+<project path="kernel/xiaomi/cancro" name="kuailexs/android_kernel_xiaomi_cancro" remote="github" revision="hybris-12.1"  clone-depth="1" />
 <project path="device/qcom/sepolicy" name="CyanogenMod/android_device_qcom_sepolicy" remote="github"  clone-depth="1" />
 <project path="device/qcom/common" name="CyanogenMod/android_device_qcom_common" remote="github"  clone-depth="1" />
 <project path="vendor/xiaomi" name="TheMuppets/proprietary_vendor_xiaomi" remote="github"  clone-depth="1" />
