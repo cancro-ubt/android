@@ -42,8 +42,8 @@
   <default remote="phablet"
            sync-j="6" />
 
- <project path="ubuntu/ubports-boot" name="kuailexs/ubports-boot" revision="master" />
- <project path="tools/rootstock-ng" name="kuailexs/rootstock-ng" revision="master"/>
+ <project path="ubuntu/ubports-boot" name="kuailexs/ubports-boot" remote="ubp" revision="master" />
+ <project path="tools/rootstock-ng" name="kuailexs/rootstock-ng" remote="ubp" revision="master"/>
  <project path="device-files" name="kuailexs/device-files" remote="ubp"  />
 
  <project path="system/core" name="kuailexs/android_system_core"  remote="ubp" clone-depth="1" />
