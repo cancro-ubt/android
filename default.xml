@@ -41,7 +41,12 @@
 
   <default remote="phablet"
            sync-j="6" />
- <project path="system/core" name="kuailexs/android_system_core"  remote="github" revision="refs/heads/ubp-5.1" clone-depth="1" />
+
+ <project path="ubuntu/ubports-boot" name="kuailexs/ubports-boot" revision="master" />
+ <project path="tools/rootstock-ng" name="kuailexs/rootstock-ng" revision="master"/>
+ <project path="device-files" name="kuailexs/device-files" remote="ubp"  />
+
+ <project path="system/core" name="kuailexs/android_system_core"  remote="ubp" clone-depth="1" />
 <project path="device/xiaomi/cancro" name="kuailexs/android_device_xiaomi_cancro" remote="github" revision="hybris-12.1" />
 <project path="kernel/xiaomi/cancro" name="kuailexs/android_kernel_xiaomi_cancro" remote="github" revision="hybris-12.1"  clone-depth="1" />
 <project path="device/qcom/sepolicy" name="CyanogenMod/android_device_qcom_sepolicy" remote="github"  clone-depth="1" />
@@ -231,8 +236,5 @@
   <project path="ubuntu/libhybris-prebuilt" name="ubuntu/libhybris-prebuilt" revision="refs/heads/personal/w-ondra/phablet-5.x" />
   <project path="ubuntu/platform-api" name="ubuntu/platform-api" revision="refs/heads/personal/w-ondra/phablet-5.x" />
   <project path="ubuntu/upstart-property-watcher" name="ubuntu/upstart-property-watcher" revision="refs/heads/personal/w-ondra/phablet-5.x" />
-
-  <project path="ubuntu/ubuntu_prebuilt_initrd_debs" name="ubuntu/initrd/ubuntu_prebuilt_initrd_debs" revision="refs/heads/master" />
-  <project path="ubuntu/ubuntu_prebuilt_initrd" name="ubuntu/initrd/ubuntu_prebuilt_initrd" revision="refs/heads/master" />
   <project path="ubuntu/prebuilts" name="ubuntu/prebuilts" revision="refs/heads/master" />
 </manifest>
