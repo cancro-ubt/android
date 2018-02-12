@@ -42,6 +42,13 @@
   <default remote="phablet"
            sync-j="6" />
 
+  <project path="hardware/qcom/media-caf/msm8974" name="kuailexs/android_hardware_qcom_media" revision="ubp-5.1-caf-8974" remote="ubp" />
+  <project path="frameworks/av" name="kuailexs/android_frameworks_av" groups="pdk" remote="ubp" />
+  <project path="frameworks/base" name="kuailexs/android_frameworks_base" groups="pdk-cw-fs" remote="ubp"  clone-depth="1" />
+  <project path="libcore" name="CyanogenMod/android_libcore" remote="cm" clone-depth="1"/>
+  <project path="external/pdfium" name="platform/external/pdfium" remote="aosp" clone-depth="1"/>
+  <project path="frameworks/minikin" name="CyanogenMod/android_frameworks_minikin" remote="cm" clone-depth="1" />
+
   <project path="external/droidmedia" name="kuailexs/droidmedia" remote="ubp" revision="master" />
   <project path="ubuntu/ubports-boot" name="kuailexs/ubports-boot" remote="ubp" revision="master" />
   <project path="tools/rootstock-ng" name="kuailexs/rootstock-ng" remote="ubp" revision="master"/>
@@ -139,8 +146,6 @@
   <project path="external/yaffs2" name="aosp/platform/external/yaffs2" groups="pdk" revision="refs/heads/personal/w-ondra/phablet-5.1.1_r5" />
   <project path="external/zlib" name="ubports/android_external_zlib" groups="pdk" remote="ubp" />
   <project path="external/zopfli" name="aosp/platform/external/zopfli" groups="pdk-cw-fs" />
-  <project path="frameworks/av" name="ubports/android_frameworks_av" groups="pdk" remote="ubp" />
-  <project path="frameworks/base" name="ubports/android_frameworks_base" groups="pdk-cw-fs" remote="ubp"  clone-depth="1" />
   <project path="frameworks/native" name="ubports/android_frameworks_native" groups="pdk" remote="ubp" />
   <project path="frameworks/opt/emoji" name="android_frameworks_opt_emoji" groups="pdk-cw-fs" remote="cm" />
   <project path="hardware/akm" name="android_hardware_akm" remote="cm" />
@@ -169,7 +174,6 @@
   <project path="hardware/qcom/media-caf/apq8084" name="android_hardware_qcom_media" groups="qcom" revision="cm-12.1-caf-8084" remote="cm" />
   <project path="hardware/qcom/media-caf/msm8916" name="android_hardware_qcom_media" groups="qcom" revision="cm-12.1-caf-8916" remote="cm" />
   <project path="hardware/qcom/media-caf/msm8960" name="android_hardware_qcom_media" groups="qcom" revision="cm-12.1-caf-8960" remote="cm" />
-  <project path="hardware/qcom/media-caf/msm8974" name="ubports/android_hardware_qcom_media" groups="qcom" revision="ubp-5.1-caf-8974" remote="ubp" />
   <project path="hardware/qcom/media-caf/msm8994" name="android_hardware_qcom_media" groups="qcom" revision="cm-12.1-caf-8994" remote="cm" />
   <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" remote="aosp" groups="qcom_msm8960" />
   <project path="hardware/qcom/msm8x26" name="platform/hardware/qcom/msm8x26" remote="aosp" groups="qcom_msm8x26" />
