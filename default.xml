@@ -42,12 +42,14 @@
   <default remote="phablet"
            sync-j="6" />
 
+  <project path="ubuntu/android-headers" name="Halium/android-headers" remote="ubp" revision="refs/heads/master" />
+
   <project path="hardware/qcom/media-caf/msm8974" name="kuailexs/android_hardware_qcom_media" revision="ubp-5.1-caf-8974" remote="ubp" />
-  <project path="frameworks/av" name="kuailexs/android_frameworks_av" groups="pdk" remote="ubp" />
-  <project path="frameworks/base" name="kuailexs/android_frameworks_base" groups="pdk-cw-fs" remote="ubp"  clone-depth="1" />
-  <project path="libcore" name="CyanogenMod/android_libcore" remote="cm" clone-depth="1"/>
+  <project path="frameworks/av" name="kuailexs/android_frameworks_av" remote="ubp" />
+  <project path="frameworks/base" name="kuailexs/android_frameworks_base" remote="ubp"  clone-depth="1" />
+  <project path="libcore" name="android_libcore" remote="cm" clone-depth="1"/>
   <project path="external/pdfium" name="platform/external/pdfium" remote="aosp" clone-depth="1"/>
-  <project path="frameworks/minikin" name="CyanogenMod/android_frameworks_minikin" remote="cm" clone-depth="1" />
+  <project path="frameworks/minikin" name="android_frameworks_minikin" remote="cm" clone-depth="1" />
 
   <project path="external/droidmedia" name="kuailexs/droidmedia" remote="ubp" revision="master" />
   <project path="ubuntu/ubports-boot" name="kuailexs/ubports-boot" remote="ubp" revision="master" />
@@ -238,7 +240,7 @@
   <project path="external/koush/Superuser" name="CyanogenMod/Superuser" revision="refs/heads/cm-12.0"/>
   <project path="external/gpg" name="aosp/platform/external/gpg" revision="refs/heads/master" />
   <project path="ubuntu/assets" name="ubuntu/assets" revision="refs/heads/master" />
-  <project path="ubuntu/libhybris" name="kuailexs/libhybris" remote="ubp" />
+  <project path="ubuntu/libhybris" name="kuailexs/libhybris" remote="ubp" revision="refs/heads/master" />
   <project path="ubuntu/libhybris-prebuilt" name="ubuntu/libhybris-prebuilt" revision="refs/heads/personal/w-ondra/phablet-5.x" />
   <project path="ubuntu/platform-api" name="ubuntu/platform-api" revision="refs/heads/personal/w-ondra/phablet-5.x" />
   <project path="ubuntu/upstart-property-watcher" name="ubuntu/upstart-property-watcher" revision="refs/heads/personal/w-ondra/phablet-5.x" />
