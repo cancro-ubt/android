@@ -23,6 +23,9 @@
   <remote name="github"
 	fetch="http://github.com"
 	revision="refs/heads/cm-12.1" />
+	
+  <remote name="peat-psuwit"
+	fetch="http://github.com/peat-psuwit" />
 
   <default remote="phablet"
            sync-j="6" />
