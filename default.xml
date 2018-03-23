@@ -53,7 +53,7 @@
   </project>
 
   <project path="device/qcom/sepolicy" name="CyanogenMod/android_device_qcom_sepolicy" remote="github"  clone-depth="1" />
-  <project path="device/qcom/common" name="CyanogenMod/android_device_qcom_common" remote="github"  clone-depth="1" />
+  <project path="device/qcom/common" name="kuailexs/android_device_qcom_common" remote="github"  clone-depth="1" />
   <project path="external/ant-wireless/antradio-library" name="CyanogenMod/android_external_ant-wireless_antradio-library" remote="github"  clone-depth="1" />
 
   <project path="abi/cpp" name="android_abi_cpp" groups="pdk" remote="cm" />
