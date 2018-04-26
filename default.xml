@@ -31,29 +31,27 @@
            sync-j="6" />
 
   <project path="ubuntu/android-headers" name="Halium/android-headers" remote="ubp" revision="refs/heads/master" />
-
-  <project path="hardware/qcom/media-caf/msm8974" name="kuailexs/android_hardware_qcom_media" revision="ubp-5.1-caf-8974" remote="ubp" />
-  <project path="frameworks/av" name="kuailexs/android_frameworks_av" remote="ubp" />
-  <project path="frameworks/base" name="kuailexs/android_frameworks_base" remote="ubp"  clone-depth="1" />
+  <project path="frameworks/av" name="cancro-ubt/android_frameworks_av" remote="ubp" />
+  <project path="frameworks/base" name="cancro-ubt/android_frameworks_base" remote="ubp"  clone-depth="1" />
   <project path="libcore" name="android_libcore" remote="cm" clone-depth="1"/>
   <project path="external/pdfium" name="platform/external/pdfium" remote="aosp" clone-depth="1"/>
   <project path="frameworks/minikin" name="android_frameworks_minikin" remote="cm" clone-depth="1" />
 
-  <project path="ubuntu/ubports-boot" name="kuailexs/ubports-boot" remote="ubp" revision="master" />
-  <project path="tools/rootstock-ng" name="kuailexs/rootstock-ng" remote="ubp" revision="master"/>
-  <project path="device-files" name="kuailexs/device-files" remote="ubp"  />
+  <project path="ubuntu/ubports-boot" name="cancro-ubt/ubports-boot" remote="ubp" revision="master" />
+  <project path="tools/rootstock-ng" name="cancro-ubt/rootstock-ng" remote="ubp" revision="master"/>
+  <project path="device-files" name="cancro-ubt/device-files" remote="ubp" clone-depth="1" />
 
-  <project path="system/core" name="kuailexs/android_system_core"  remote="ubp" clone-depth="1" />
-  <project path="device/xiaomi/cancro" name="kuailexs/android_device_xiaomi_cancro" remote="github" revision="hybris-12.1" />
-  <project path="kernel/xiaomi/cancro" name="kuailexs/android_kernel_xiaomi_cancro" remote="github" revision="hybris-12.1"  clone-depth="1" />
-  <project path="vendor/xiaomi/cancro" name="kuailexs/proprietary_vendor_xiaomi_cancro" remote="github"  clone-depth="1" />
+  <project path="system/core" name="cancro-ubt/android_system_core"  remote="ubp" clone-depth="1" />
+  <project path="device/xiaomi/cancro" name="cancro-ubt/android_device_xiaomi_cancro" remote="github" revision="hybris-12.1" />
+  <project path="kernel/xiaomi/cancro" name="cancro-ubt/android_kernel_xiaomi_cancro" remote="github" revision="hybris-12.1"  clone-depth="1" />
+  <project path="vendor/xiaomi/cancro" name="cancro-ubt/proprietary_vendor_xiaomi_cancro" remote="github"  clone-depth="1" />
 
-  <project path="build" name="kuailexs/android_build" groups="pdk,tradefed" remote="ubp" >
+  <project path="build" name="cancro-ubt/android_build" groups="pdk,tradefed" remote="ubp" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
   <project path="device/qcom/sepolicy" name="CyanogenMod/android_device_qcom_sepolicy" remote="github"  clone-depth="1" />
-  <project path="device/qcom/common" name="kuailexs/android_device_qcom_common" remote="github"  clone-depth="1" />
+  <project path="device/qcom/common" name="cancro-ubt/android_device_qcom_common" remote="github"  clone-depth="1" />
   <project path="external/ant-wireless/antradio-library" name="CyanogenMod/android_external_ant-wireless_antradio-library" remote="github"  clone-depth="1" />
 
   <project path="abi/cpp" name="android_abi_cpp" groups="pdk" remote="cm" />
@@ -141,43 +139,20 @@
   <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" groups="pdk" remote="cm" />
   <project path="hardware/broadcom/wlan" name="android_hardware_broadcom_wlan" groups="broadcom_wlan" remote="cm" />
   <project path="hardware/invensense" name="android_hardware_invensense" groups="invensense" remote="cm" />
-  <project path="hardware/libhardware" name="kuailexs/android_hardware_libhardware" groups="pdk" remote="ubp" />
+  <project path="hardware/libhardware" name="cancro-ubt/android_hardware_libhardware" groups="pdk" remote="ubp" />
   <project path="hardware/libhardware_legacy" name="ubports/android_hardware_libhardware_legacy" groups="pdk" remote="ubp" />
-
   <project path="hardware/qcom/audio/default" name="android_hardware_qcom_audio" remote="cm" groups="qcom,qcom_audio" />
-  <project path="hardware/qcom/audio-caf/apq8084" name="android_hardware_qcom_audio" remote="cm" groups="qcom,qcom_audio" revision="cm-12.1-caf-8084" />
-  <project path="hardware/qcom/audio-caf/msm8916" name="android_hardware_qcom_audio" remote="cm" groups="qcom,qcom_audio" revision="cm-12.1-caf-8916" />
-  <project path="hardware/qcom/audio-caf/msm8960" name="android_hardware_qcom_audio" remote="cm" groups="qcom,qcom_audio" revision="cm-12.1-caf-8960" />
-  <project path="hardware/qcom/audio-caf/msm8974" name="ubports/android_hardware_qcom_audio" remote="ubp" groups="qcom,qcom_audio" revision="ubp-5.1-caf-8974" />
-  <project path="hardware/qcom/audio-caf/msm8994" name="android_hardware_qcom_audio" remote="cm" groups="qcom,qcom_audio" revision="cm-12.1-caf-8994" />
+  <project path="hardware/qcom/audio-caf/msm8974" name="android_hardware_qcom_audio" remote="cm" groups="qcom,qcom_audio" revision="cm-12.1-caf-8974" />
   <project path="hardware/qcom/bt" name="android_hardware_qcom_bt" groups="qcom" remote="cm" />
-  <project path="hardware/qcom/display" name="ubports/android_hardware_qcom_display" remote="ubp" groups="qcom,qcom_display" />
-  <project path="hardware/qcom/display-caf/apq8084" name="ubports/android_hardware_qcom_display" remote="ubp" groups="qcom,qcom_display" revision="cm-12.1-caf-8084" />
-  <project path="hardware/qcom/display-caf/msm8916" name="ubports/android_hardware_qcom_display" remote="ubp" groups="qcom,qcom_display" revision="cm-12.1-caf-8916" />
-  <project path="hardware/qcom/display-caf/msm8960" name="ubports/android_hardware_qcom_display" remote="ubp" groups="qcom,qcom_display" revision="cm-12.1-caf-8960" />
-  <project path="hardware/qcom/display-caf/msm8974" name="ubports/android_hardware_qcom_display" remote="ubp" groups="qcom,qcom_display" revision="ubp-5.1-caf-8974" />
-  <project path="hardware/qcom/display-caf/msm8994" name="ubports/android_hardware_qcom_display" remote="ubp" groups="qcom,qcom_display" revision="cm-12.1-caf-8994" />
+  <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="cm" groups="qcom,qcom_display" />
+  <project path="hardware/qcom/display-caf/msm8974" name="android_hardware_qcom_display" remote="cm" groups="qcom,qcom_display" revision="cm-12.1-caf-8974" />
   <project path="hardware/qcom/gps" name="android_hardware_qcom_gps" groups="qcom" remote="cm" />
   <project path="hardware/qcom/keymaster" name="android_hardware_qcom_keymaster" groups="qcom" remote="cm" />
   <project path="hardware/qcom/media/default" name="android_hardware_qcom_media" groups="qcom" remote="cm" />
-  <project path="hardware/qcom/media-caf/apq8084" name="android_hardware_qcom_media" groups="qcom" revision="cm-12.1-caf-8084" remote="cm" />
-  <project path="hardware/qcom/media-caf/msm8916" name="android_hardware_qcom_media" groups="qcom" revision="cm-12.1-caf-8916" remote="cm" />
-  <project path="hardware/qcom/media-caf/msm8960" name="android_hardware_qcom_media" groups="qcom" revision="cm-12.1-caf-8960" remote="cm" />
-  <project path="hardware/qcom/media-caf/msm8994" name="android_hardware_qcom_media" groups="qcom" revision="cm-12.1-caf-8994" remote="cm" />
-  <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" remote="aosp" groups="qcom_msm8960" />
-  <project path="hardware/qcom/msm8x26" name="platform/hardware/qcom/msm8x26" remote="aosp" groups="qcom_msm8x26" />
-  <project path="hardware/qcom/msm8x27" name="platform/hardware/qcom/msm8x27" remote="aosp" groups="qcom_msm8x27" />
+  <project path="hardware/qcom/media-caf/msm8974" name="android_hardware_qcom_media" revision="cm-12.1-caf-8974" remote="cm" />
   <project path="hardware/qcom/msm8x74" name="platform/hardware/qcom/msm8x74" remote="aosp" groups="qcom_msm8x74" />
-  <project path="hardware/qcom/msm8x84" name="platform/hardware/qcom/msm8x84" remote="aosp" groups="qcom_msm8x84" />
   <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" remote="cm" groups="qcom_wlan" />
-
-  <project path="hardware/ril" name="ubports/android_hardware_ril" groups="pdk" remote="ubp" />
-  <project path="hardware/ril-caf" name="ubports/android_hardware_ril" groups="pdk" revision="ubp-5.1-caf" remote="ubp" />
-  <project path="hardware/ril-fp2" name="ubports/android_hardware_ril" groups="pdk" revision="ubp-5.1-fp2" remote="ubp" />
-  <project path="hardware/samsung_slsi/exynos5" name="android_hardware_samsung_slsi_exynos5" groups="exynos5" remote="cm" />
-  <project path="hardware/ti/omap3" name="aosp/platform/hardware/ti/omap3" groups="omap3" />
-  <project path="hardware/ti/omap4-aah" name="aosp/platform/hardware/ti/omap4-aah" groups="omap4-aah" />
-  <project path="hardware/ti/omap4xxx" name="android_hardware_ti_omap4xxx" groups="omap4" remote="cm" />
+  <project path="hardware/ril" name="android_hardware_ril" groups="pdk" remote="cm" />
   <project path="libnativehelper" name="android_libnativehelper" groups="pdk" remote="cm" />
   <project path="prebuilts/clang/linux-x86/3.1" name="aosp/platform/prebuilts/clang/linux-x86/3.1" groups="pdk,linux" />
   <project path="prebuilts/clang/linux-x86/3.2" name="aosp/platform/prebuilts/clang/linux-x86/3.2" groups="pdk,linux" />
@@ -186,22 +161,16 @@
   <project path="prebuilts/clang/linux-x86/host/3.5" name="aosp/platform/prebuilts/clang/linux-x86/host/3.5" groups="pdk,linux" />
   <project path="prebuilts/clang/linux-x86/x86/3.3" name="aosp/platform/prebuilts/clang/linux-x86/x86/3.3" groups="linux,pdk-cw-fs,x86" />
   <project path="prebuilts/devtools" name="aosp/platform/prebuilts/devtools" />
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.8" name="aosp/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.8" groups="linux" />
-  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="aosp/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" groups="linux" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="aosp/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" groups="linux" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" name="aosp/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" groups="linux" />
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.6" name="aosp/platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.6" groups="linux" />
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" name="aosp/platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" groups="linux" />
   <project path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" name="aosp/platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" groups="linux" />
-  <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.8" name="aosp/platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.8" groups="linux,x86" />
-  <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="aosp/platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" groups="linux,x86" />
   <project path="prebuilts/libs/libedit" name="aosp/platform/prebuilts/libs/libedit" groups="pdk-cw-fs" />
   <project path="prebuilts/maven_repo/android" name="aosp/platform/prebuilts/maven_repo/android" groups="pdk-cw-fs" />
   <project path="prebuilts/misc" name="aosp/platform/prebuilts/misc" groups="pdk,tradefed" />
   <project path="prebuilts/ndk" name="aosp/platform/prebuilts/ndk" groups="pdk" clone-depth="1"/>
-  <project path="prebuilts/python/darwin-x86/2.7.5" name="aosp/platform/prebuilts/python/darwin-x86/2.7.5" groups="darwin" />
   <project path="prebuilts/python/linux-x86/2.7.5" name="aosp/platform/prebuilts/python/linux-x86/2.7.5" groups="linux" />
-  <project path="prebuilts/qemu-kernel" name="aosp/platform/prebuilts/qemu-kernel" groups="pdk" clone-depth="1" />
   <project path="prebuilts/tools" name="aosp/platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="aosp/platform/sdk" groups="pdk-cw-fs" revision="refs/heads/personal/w-ondra/phablet-5.1.1_r5" />
 
@@ -227,7 +196,7 @@
   <project path="external/koush/Superuser" name="CyanogenMod/Superuser" revision="refs/heads/cm-12.0"/>
   <project path="external/gpg" name="aosp/platform/external/gpg" revision="refs/heads/master" />
   <project path="ubuntu/assets" name="ubuntu/assets" revision="refs/heads/master" />
-  <project path="ubuntu/libhybris" name="kuailexs/libhybris" remote="ubp" />
+  <project path="ubuntu/libhybris" name="cancro-ubt/libhybris" remote="ubp" />
   <project path="ubuntu/libhybris-prebuilt" name="ubuntu/libhybris-prebuilt" revision="refs/heads/personal/w-ondra/phablet-5.x" />
   <project path="ubuntu/platform-api" name="ubuntu/platform-api" revision="refs/heads/personal/w-ondra/phablet-5.x" />
   <project path="ubuntu/upstart-property-watcher" name="ubuntu/upstart-property-watcher" revision="refs/heads/personal/w-ondra/phablet-5.x" />
