@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote name="phablet"
-	fetch="http://code-review.phablet.ubuntu.com"
-	review="http://code-review.phablet.ubuntu.com"
-	revision="refs/tags/android-5.1.1_r5" />
-
-  <remote  name="aosp"
-           fetch="https://aosp.tuna.tsinghua.edu.cn/"
-           review="android-review.googlesource.com"
-           revision="refs/tags/android-5.1.1_r26" />
+  <remote name="kuailexs"
+	fetch="http://git.kuailexs.com" 
+	revision="refs/heads/ubp-5.1" />
 
   <remote name="cm"
 	fetch="http://github.com/CyanogenMod"
@@ -23,12 +17,15 @@
   <remote name="github"
 	fetch="http://github.com"
 	revision="refs/heads/cm-12.1" />
-	
-  <remote name="peat-psuwit"
-	fetch="http://github.com/peat-psuwit" />
 
-  <default remote="phablet"
-           sync-j="6" />
+  <remote  name="aosp"
+           fetch="https://aosp.tuna.tsinghua.edu.cn/"
+           review="android-review.googlesource.com"
+revision="refs/tags/android-5.1.1_r26" />
+
+  <default remote="kuailexs"
+           sync-j="4" />
+  
 
   <project path="ubuntu/android-headers" name="Halium/android-headers" remote="ubp" revision="refs/heads/master" />
   <project path="frameworks/av" name="cancro-ubt/android_frameworks_av" remote="ubp" />
@@ -54,151 +51,186 @@
   <project path="device/qcom/common" name="cancro-ubt/android_device_qcom_common" remote="github"  clone-depth="1" />
   <project path="external/ant-wireless/antradio-library" name="CyanogenMod/android_external_ant-wireless_antradio-library" remote="github"  clone-depth="1" />
 
-  <project path="abi/cpp" name="android_abi_cpp" groups="pdk" remote="cm" />
-  <project path="bionic" name="ubports/android_bionic" groups="pdk" remote="ubp" revision="refs/heads/ubp-5.1.1" />
-  <project path="development" name="ubports/android_development" remote="ubp"  clone-depth="1" />
-  <project path="external/audioflingerglue" name="ubports/audioflingerglue" remote="ubp" />
-
-  <project path="external/aac" name="aosp/platform/external/aac" groups="pdk" />
-  <project path="external/bison" name="aosp/platform/external/bison" groups="pdk" />
-  <project path="external/bson" name="android_external_bson" remote="cm" />
-  <project path="external/bzip2" name="aosp/platform/external/bzip2" groups="pdk" />
-  <project path="external/checkpolicy" name="aosp/platform/external/checkpolicy" groups="pdk" />
-  <project path="external/compiler-rt" name="aosp/platform/external/compiler-rt" groups="pdk" />
-  <project path="external/connectivity" name="android_external_connectivity" remote="cm" />
-  <project path="external/e2fsprogs" name="ubports/android_external_e2fsprogs" groups="pdk" remote="ubp" />
-  <project path="external/expat" name="aosp/platform/external/expat" groups="pdk" />
-  <project path="external/exfat" name="android_external_exfat" groups="pdk" remote="cm" />
-  <project path="external/f2fs-tools" name="android_external_f2fs-tools" groups="pdk" remote="cm" />
-  <project path="external/ffmpeg" name="android_external_ffmpeg" remote="cm" />
-  <project path="external/flac" name="android_external_flac" groups="pdk" remote="cm" />
-  <project path="external/freetype" name="aosp/platform/external/freetype" groups="pdk" />
-  <project path="external/fsck_msdos" name="ubports/android_external_fsck_msdos" groups="pdk-cw-fs" remote="ubp" />
-  <project path="external/fuse" name="android_external_fuse" remote="cm" />
-  <project path="external/gcc-demangle" name="aosp/platform/external/gcc-demangle" groups="pdk" />
-  <project path="external/genext2fs" name="aosp/platform/external/genext2fs" groups="pdk-cw-fs" />
-  <project path="external/giflib" name="aosp/platform/external/giflib" groups="pdk-cw-fs" />
-  <project path="external/gtest" name="aosp/platform/external/gtest" groups="pdk" />
-  <project path="external/harfbuzz_ng" name="aosp/platform/external/harfbuzz_ng" groups="pdk-cw-fs" />
-  <project path="external/icu" name="android_external_icu" groups="pdk" remote="cm" />
-  <project path="external/iptables" name="android_external_iptables" groups="pdk" remote="cm" />
-  <project path="external/iproute2" name="android_external_iproute2" groups="pdk" remote="cm" />  
-  <project path="external/jemalloc" name="aosp/platform/external/jemalloc" groups="pdk,flo" />
-  <project path="external/jhead" name="aosp/platform/external/jhead" groups="pdk" revision="refs/heads/personal/w-ondra/phablet-5.1.1_r5" />
-  <project path="external/jpeg" name="android_external_jpeg" groups="pdk" remote="cm" />
-  <project path="external/jsmn" name="aosp/platform/external/jsmn" groups="pdk" />
-  <project path="external/jsoncpp" name="aosp/platform/external/jsoncpp" groups="pdk-cw-fs" />
-  <project path="external/kernel-headers" name="aosp/platform/external/kernel-headers" groups="pdk-cw-fs" />
-  <project path="external/libcap-ng" name="aosp/platform/external/libcap-ng" />
-  <project path="external/libcxx" name="ubports/android_external_libcxx" remote="ubp" groups="pdk" />
-  <project path="external/libcxxabi" name="aosp/platform/external/libcxxabi" groups="pdk" />
-  <project path="external/libgsm" name="aosp/platform/external/libgsm" groups="pdk" />
-  <project path="external/liblzf" name="aosp/platform/external/liblzf" groups="pdk" revision="refs/heads/personal/w-ondra/phablet-5.1.1_r5" />
-  <project path="external/libnl" name="aosp/platform/external/libnl" groups="pdk" />
-  <project path="external/libogg" name="aosp/platform/external/libogg" groups="pdk" />
-  <project path="external/libopus" name="aosp/platform/external/libopus" groups="pdk" />
-  <project path="external/libpng" name="ubports/android_external_libpng" groups="pdk" remote="ubp" />
-  <project path="external/libselinux" name="android_external_libselinux" remote="cm" />
-  <project path="external/libsepol" name="android_external_libsepol" groups="pdk" remote="cm" />
-  <project path="external/libunwind" name="aosp/platform/external/libunwind" groups="pdk" />
-  <project path="external/libvpx" name="android_external_libvpx" groups="pdk" remote="cm" />
-  <project path="external/libxml2" name="android_external_libxml2" groups="pdk" remote="cm"/>
-  <project path="external/lz4" name="android_external_lz4" remote="cm" />
-  <project path="external/lzma" name="android_external_lzma" remote="cm" />
-  <project path="external/mdnsresponder" name="aosp/platform/external/mdnsresponder" groups="pdk" />
-  <project path="external/mksh" name="android_external_mksh" groups="pdk" remote="cm" />
-  <project path="external/openssl" name="ubports/android_external_openssl" groups="pdk" remote="ubp" />
-  <project path="external/pcre" name="android_external_pcre" groups="pdk-cw-fs" remote="cm" />
-  <project path="external/protobuf" name="aosp/platform/external/protobuf" groups="pdk" revision="refs/heads/personal/w-ondra/phablet-5.1.1_r5" />
-  <project path="external/qemu" name="aosp/platform/external/qemu" groups="pdk-cw-fs" />
-  <project path="external/qemu-pc-bios" name="aosp/platform/external/qemu-pc-bios" groups="pdk-cw-fs" />
-  <project path="external/safe-iop" name="aosp/platform/external/safe-iop" groups="pdk" />
-  <project path="external/scrypt" name="aosp/platform/external/scrypt" groups="pdk" revision="refs/heads/personal/w-ondra/phablet-5.1.1_r5" />
-  <project path="external/sepolicy" name="ubports/android_external_sepolicy" groups="pdk" remote="ubp" />
-  <project path="external/sfntly" name="aosp/platform/external/sfntly" groups="pdk-cw-fs" />
-  <project path="external/skia" name="android_external_skia" groups="pdk-cw-fs" remote="cm" />
-  <project path="external/sonivox" name="android_external_sonivox" groups="pdk" remote="cm" />
-  <project path="external/speex" name="android_external_speex" groups="pdk" remote="cm" />
-  <project path="external/sqlite" name="android_external_sqlite" groups="pdk" remote="cm" />
-  <project path="external/stagefright-plugins" name="android_external_stagefright-plugins" remote="cm" />
-  <project path="external/stlport" name="aosp/platform/external/stlport" groups="pdk" />
-  <project path="external/strace" name="android_external_strace" groups="pdk-cw-fs" remote="cm" />
-  <project path="external/libtar" name="android_external_libtar" remote="cm" />
-  <project path="external/tinyalsa" name="android_external_tinyalsa" groups="pdk" remote="cm" />
-  <project path="external/tinycompress" name="android_external_tinycompress" groups="pdk" remote="cm" />
-  <project path="external/tremolo" name="aosp/platform/external/tremolo" groups="pdk" />
-  <project path="external/webp" name="aosp/platform/external/webp" groups="pdk-cw-fs" />
-  <project path="external/webrtc" name="aosp/platform/external/webrtc" groups="pdk" />
-  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" groups="pdk" remote="cm" />
-  <project path="external/yaffs2" name="aosp/platform/external/yaffs2" groups="pdk" revision="refs/heads/personal/w-ondra/phablet-5.1.1_r5" />
-  <project path="external/zlib" name="ubports/android_external_zlib" groups="pdk" remote="ubp" />
-  <project path="external/zopfli" name="aosp/platform/external/zopfli" groups="pdk-cw-fs" />
-  <project path="frameworks/native" name="ubports/android_frameworks_native" groups="pdk" remote="ubp" />
-  <project path="frameworks/opt/emoji" name="android_frameworks_opt_emoji" groups="pdk-cw-fs" remote="cm" />
-  <project path="hardware/akm" name="android_hardware_akm" remote="cm" />
-  <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" groups="pdk" remote="cm" />
-  <project path="hardware/broadcom/wlan" name="android_hardware_broadcom_wlan" groups="broadcom_wlan" remote="cm" />
-  <project path="hardware/invensense" name="android_hardware_invensense" groups="invensense" remote="cm" />
+  <project path="ubuntu/libhybris" name="cancro-ubt/libhybris" remote="ubp" />
   <project path="hardware/libhardware" name="cancro-ubt/android_hardware_libhardware" groups="pdk" remote="ubp" />
-  <project path="hardware/libhardware_legacy" name="ubports/android_hardware_libhardware_legacy" groups="pdk" remote="ubp" />
-  <project path="hardware/qcom/audio/default" name="android_hardware_qcom_audio" remote="cm" groups="qcom,qcom_audio" />
-  <project path="hardware/qcom/audio-caf/msm8974" name="android_hardware_qcom_audio" remote="cm" groups="qcom,qcom_audio" revision="cm-12.1-caf-8974" />
-  <project path="hardware/qcom/bt" name="android_hardware_qcom_bt" groups="qcom" remote="cm" />
-  <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="cm" groups="qcom,qcom_display" />
-  <project path="hardware/qcom/display-caf/msm8974" name="android_hardware_qcom_display" remote="cm" groups="qcom,qcom_display" revision="cm-12.1-caf-8974" />
-  <project path="hardware/qcom/gps" name="android_hardware_qcom_gps" groups="qcom" remote="cm" />
-  <project path="hardware/qcom/keymaster" name="android_hardware_qcom_keymaster" groups="qcom" remote="cm" />
-  <project path="hardware/qcom/media/default" name="android_hardware_qcom_media" groups="qcom" remote="cm" />
-  <project path="hardware/qcom/media-caf/msm8974" name="android_hardware_qcom_media" revision="cm-12.1-caf-8974" remote="cm" />
-  <project path="hardware/qcom/msm8x74" name="platform/hardware/qcom/msm8x74" remote="aosp" groups="qcom_msm8x74" />
-  <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" remote="cm" groups="qcom_wlan" />
-  <project path="hardware/ril" name="android_hardware_ril" groups="pdk" remote="cm" />
-  <project path="libnativehelper" name="android_libnativehelper" groups="pdk" remote="cm" />
-  <project path="prebuilts/clang/linux-x86/3.1" name="aosp/platform/prebuilts/clang/linux-x86/3.1" groups="pdk,linux" />
-  <project path="prebuilts/clang/linux-x86/3.2" name="aosp/platform/prebuilts/clang/linux-x86/3.2" groups="pdk,linux" />
-  <project path="prebuilts/clang/linux-x86/arm/3.3" name="aosp/platform/prebuilts/clang/linux-x86/arm/3.3" groups="arm,linux,pdk-cw-fs" />
-  <project path="prebuilts/clang/linux-x86/host/3.4" name="aosp/platform/prebuilts/clang/linux-x86/host/3.4" groups="pdk,linux" />
-  <project path="prebuilts/clang/linux-x86/host/3.5" name="aosp/platform/prebuilts/clang/linux-x86/host/3.5" groups="pdk,linux" />
-  <project path="prebuilts/clang/linux-x86/x86/3.3" name="aosp/platform/prebuilts/clang/linux-x86/x86/3.3" groups="linux,pdk-cw-fs,x86" />
-  <project path="prebuilts/devtools" name="aosp/platform/prebuilts/devtools" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="aosp/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" groups="linux" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" name="aosp/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" groups="linux" />
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.6" name="aosp/platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.6" groups="linux" />
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" name="aosp/platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" groups="linux" />
-  <project path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" name="aosp/platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" groups="linux" />
-  <project path="prebuilts/libs/libedit" name="aosp/platform/prebuilts/libs/libedit" groups="pdk-cw-fs" />
-  <project path="prebuilts/maven_repo/android" name="aosp/platform/prebuilts/maven_repo/android" groups="pdk-cw-fs" />
-  <project path="prebuilts/misc" name="aosp/platform/prebuilts/misc" groups="pdk,tradefed" />
-  <project path="prebuilts/ndk" name="aosp/platform/prebuilts/ndk" groups="pdk" clone-depth="1"/>
-  <project path="prebuilts/python/linux-x86/2.7.5" name="aosp/platform/prebuilts/python/linux-x86/2.7.5" groups="linux" />
-  <project path="prebuilts/tools" name="aosp/platform/prebuilts/tools" groups="pdk,tools" />
-  <project path="sdk" name="aosp/platform/sdk" groups="pdk-cw-fs" revision="refs/heads/personal/w-ondra/phablet-5.1.1_r5" />
 
-  <project path="system/extras" name="ubports/android_system_extras" groups="pdk" remote="ubp" />
-  <project path="system/keymaster" name="android_system_keymaster" groups="pdk" remote="cm" />
-  <project path="system/media" name="android_system_media" groups="pdk" remote="cm" />
-  <project path="system/netd" name="android_system_netd" groups="pdk" remote="cm" />
-  <project path="system/qcom" name="android_system_qcom" groups="pdk" remote="cm" />
-  <project path="system/security" name="android_system_security" groups="pdk" remote="cm" />
-  <project path="system/vold" name="ubports/android_system_vold" groups="pdk" remote="ubp" />
-  <project path="tools/external/fat32lib" name="aosp/platform/tools/external/fat32lib" groups="tools" />
 
-  <project path="vendor/cm" name="ubports/android_vendor_cm" remote="ubp"  clone-depth="1" />
+  <project path="abi/cpp" name="ubuntu/android_abi_cpp" />
+  <project path="bionic" name="ubuntu/android_bionic" />
+  <project path="development" name="ubuntu/android_development" />
+  <project path="external/audioflingerglue" name="ubuntu/audioflingerglue" />
+  <project path="external/aac" name="ubuntu/android_external_aac" />
+  <project path="external/bison" name="ubuntu/android_external_bison" />
+  <project path="external/bson" name="ubuntu/android_external_bson" />
+  <project path="external/bzip2" name="ubuntu/android_external_bzip2" />
+  <project path="external/checkpolicy" name="ubuntu/android_external_checkpolicy" />
+  <project path="external/compiler-rt" name="ubuntu/android_external_compiler-rt" />
+  <project path="external/connectivity" name="ubuntu/android_external_connectivity" />
+  <project path="external/e2fsprogs" name="ubuntu/android_external_e2fsprogs" />
+  <project path="external/expat" name="ubuntu/android_external_expat" />
+  <project path="external/exfat" name="ubuntu/android_external_exfat" />
+  <project path="external/f2fs-tools" name="ubuntu/android_external_f2fs-tools" />
+  <project path="external/ffmpeg" name="ubuntu/android_external_ffmpeg" />
+  <project path="external/flac" name="ubuntu/android_external_flac" />
+  <project path="external/freetype" name="ubuntu/android_external_freetype" />
+  <project path="external/fsck_msdos" name="ubuntu/android_external_fsck_msdos" />
+  <project path="external/fuse" name="ubuntu/android_external_fuse" />
+  <project path="external/gcc-demangle" name="ubuntu/android_external_gcc-demangle" />
+  <project path="external/genext2fs" name="ubuntu/android_external_genext2fs" />
+  <project path="external/giflib" name="ubuntu/android_external_giflib" />
+  <project path="external/gtest" name="ubuntu/android_external_gtest" />
+  <project path="external/harfbuzz_ng" name="ubuntu/android_external_harfbuzz_ng" />
+  <project path="external/icu" name="ubuntu/android_external_icu" />
+  <project path="external/iptables" name="ubuntu/android_external_iptables" />
+  <project path="external/iproute2" name="ubuntu/android_external_iproute2" />  
+  <project path="external/jemalloc" name="ubuntu/android_external_jemalloc" />
+  <project path="external/jhead" name="ubuntu/android_external_jhead" />
+  <project path="external/jpeg" name="ubuntu/android_external_jpeg" />
+  <project path="external/jsmn" name="ubuntu/android_external_jsmn" />
+  <project path="external/jsoncpp" name="ubuntu/android_external_jsoncpp" />
+  <project path="external/kernel-headers" name="ubuntu/android_external_kernel-headers" />
+  <project path="external/libcap-ng" name="ubuntu/android_external_libcap-ng"/>
+  <project path="external/libcxx" name="ubuntu/android_external_libcxx" />
+  <project path="external/libcxxabi" name="ubuntu/android_external_libcxxabi" />
+  <project path="external/libgsm" name="ubuntu/android_external_libgsm" />
+  <project path="external/liblzf" name="ubuntu/android_external_liblzf" />
+  <project path="external/libnl" name="ubuntu/android_external_libnl" />
+  <project path="external/libogg" name="ubuntu/android_external_libogg" />
+  <project path="external/libopus" name="ubuntu/android_external_libopus" />
+  <project path="external/libpng" name="ubuntu/android_external_libpng" />
+  <project path="external/libselinux" name="ubuntu/android_external_libselinux" />
+  <project path="external/libsepol" name="ubuntu/android_external_libsepol" />
+  <project path="external/libunwind" name="ubuntu/android_external_libunwind" />
+  <project path="external/libvpx" name="ubuntu/android_external_libvpx" />
+  <project path="external/libxml2" name="ubuntu/android_external_libxml2"/>
+  <project path="external/lz4" name="ubuntu/android_external_lz4" />
+  <project path="external/lzma" name="ubuntu/android_external_lzma" />
+  <project path="external/mdnsresponder" name="ubuntu/android_external_mdnsresponder" />
+  <project path="external/mksh" name="ubuntu/android_external_mksh" />
+  <project path="external/openssl" name="ubuntu/android_external_openssl" />
+  <project path="external/pcre" name="ubuntu/android_external_pcre" />
+  <project path="external/protobuf" name="ubuntu/android_external_protobuf" />
+  <project path="external/qemu" name="ubuntu/android_external_qemu" />
+  <project path="external/qemu-pc-bios" name="ubuntu/android_external_qemu-pc-bios" />
+  <project path="external/safe-iop" name="ubuntu/android_external_safe-iop" />
+  <project path="external/scrypt" name="ubuntu/android_external_scrypt" />
+  <project path="external/sepolicy" name="ubuntu/android_external_sepolicy" />
+  <project path="external/sfntly" name="ubuntu/android_external_sfntly" />
+  <project path="external/skia" name="ubuntu/android_external_skia" />
+  <project path="external/sonivox" name="ubuntu/android_external_sonivox" />
+  <project path="external/speex" name="ubuntu/android_external_speex" />
+  <project path="external/sqlite" name="ubuntu/android_external_sqlite" />
+  <project path="external/stagefright-plugins" name="ubuntu/android_external_stagefright-plugins" />
+  <project path="external/stlport" name="ubuntu/android_external_stlport" />
+  <project path="external/strace" name="ubuntu/android_external_strace" />
+  <project path="external/libtar" name="ubuntu/android_external_libtar" />
+  <project path="external/tinyalsa" name="ubuntu/android_external_tinyalsa" />
+  <project path="external/tinycompress" name="ubuntu/android_external_tinycompress" />
+  <project path="external/tremolo" name="ubuntu/android_external_tremolo" />
+  <project path="external/webp" name="ubuntu/android_external_webp" />
+  <project path="external/webrtc" name="ubuntu/android_external_webrtc" />
+  <project path="external/wpa_supplicant_8" name="ubuntu/android_external_wpa_supplicant_8" />
+  <project path="external/yaffs2" name="ubuntu/android_external_yaffs2" />
+  <project path="external/zlib" name="ubuntu/android_external_zlib" />
+  <project path="external/zopfli" name="ubuntu/android_external_zopfli" />
+  <project path="frameworks/native" name="ubuntu/android_frameworks_native" />
+  <project path="frameworks/opt/emoji" name="ubuntu/android_frameworks_opt_emoji" />
+  <project path="hardware/akm" name="ubuntu/android_hardware_akm" />
+  <project path="hardware/broadcom/libbt" name="ubuntu/android_hardware_broadcom_libbt" />
+  <project path="hardware/broadcom/wlan" name="ubuntu/android_hardware_broadcom_wlan" />
+  <project path="hardware/invensense" name="ubuntu/android_hardware_invensense" />
+  <project path="hardware/libhardware_legacy" name="ubuntu/android_hardware_libhardware_legacy" />
+  <project path="hardware/qcom/bt" name="ubuntu/android_hardware_qcom_bt" />
+  <project path="hardware/qcom/gps" name="ubuntu/android_hardware_qcom_gps" />
+  <project path="hardware/qcom/keymaster" name="ubuntu/android_hardware_qcom_keymaster" />
+  <project path="hardware/qcom/audio/default" name="ubuntu/android_hardware_qcom_audio" />
+  <project path="hardware/qcom/audio-caf/apq8084" name="ubuntu/android_hardware_qcom_audio" revision="cm-12.1-caf-8084" />
+  <project path="hardware/qcom/audio-caf/msm8916" name="ubuntu/android_hardware_qcom_audio" revision="cm-12.1-caf-8916" />
+  <project path="hardware/qcom/audio-caf/msm8960" name="ubuntu/android_hardware_qcom_audio" revision="cm-12.1-caf-8960" />
+  <project path="hardware/qcom/audio-caf/msm8974" name="ubuntu/android_hardware_qcom_audio" revision="ubp-5.1-caf-8974" />
+  <project path="hardware/qcom/audio-caf/msm8994" name="ubuntu/android_hardware_qcom_audio" revision="cm-12.1-caf-8994" />
 
-  <project path="bootable/recovery" name="ubports/android_bootable_recovery" groups="pdk" remote="ubp"  clone-depth="1" /> 
+  <project path="hardware/qcom/display" name="ubuntu/android_hardware_qcom_display" />
+  <project path="hardware/qcom/display-caf/apq8084" name="ubuntu/android_hardware_qcom_display" revision="cm-12.1-caf-8084" />
+  <project path="hardware/qcom/display-caf/msm8916" name="ubuntu/android_hardware_qcom_display" revision="cm-12.1-caf-8916" />
+  <project path="hardware/qcom/display-caf/msm8960" name="ubuntu/android_hardware_qcom_display" revision="cm-12.1-caf-8960" />
+  <project path="hardware/qcom/display-caf/msm8974" name="ubuntu/android_hardware_qcom_display" revision="ubp-5.1-caf-8974" />
+  <project path="hardware/qcom/display-caf/msm8994" name="ubuntu/android_hardware_qcom_display" revision="cm-12.1-caf-8994" />
 
-  <project path="vendor/sony/system/timekeep" name="timekeep" remote="peat-psuwit" revision="ubuntu-touch" />
+  <project path="hardware/qcom/media/default" name="ubuntu/android_hardware_qcom_media" />
+  <project path="hardware/qcom/media-caf/apq8084" name="ubuntu/android_hardware_qcom_media" revision="cm-12.1-caf-8084" />
+  <project path="hardware/qcom/media-caf/msm8916" name="ubuntu/android_hardware_qcom_media" revision="cm-12.1-caf-8916" />
+  <project path="hardware/qcom/media-caf/msm8960" name="ubuntu/android_hardware_qcom_media" revision="cm-12.1-caf-8960" />
+  <project path="hardware/qcom/media-caf/msm8974" name="ubuntu/android_hardware_qcom_media" revision="ubp-5.1-caf-8974" />
+  <project path="hardware/qcom/media-caf/msm8994" name="ubuntu/android_hardware_qcom_media" revision="cm-12.1-caf-8994" />
+
+  <project path="hardware/qcom/msm8960" name="ubuntu/android_hardware_qcom_msm8960" />
+  <project path="hardware/qcom/msm8x26" name="ubuntu/android_hardware_qcom_msm8x26" />
+  <project path="hardware/qcom/msm8x27" name="ubuntu/android_hardware_qcom_msm8x27" />
+  <project path="hardware/qcom/msm8x74" name="ubuntu/android_hardware_qcom_msm8x74" />
+  <project path="hardware/qcom/msm8x84" name="ubuntu/android_hardware_qcom_msm8x84" />
+  <project path="hardware/qcom/wlan" name="ubuntu/android_hardware_qcom_wlan" />
+  <project path="hardware/ril" name="ubuntu/android_hardware_ril" />
+  <project path="hardware/ril-caf" name="ubuntu/android_hardware_ril" revision="ubp-5.1-caf" />
+  <project path="hardware/ril-fp2" name="ubuntu/android_hardware_ril" revision="ubp-5.1-fp2" />
+  <project path="hardware/samsung_slsi/exynos5" name="ubuntu/android_hardware_samsung_slsi_exynos5" />
+  <project path="hardware/ti/omap3" name="ubuntu/android_hardware_ti_omap3" />
+  <project path="hardware/ti/omap4-aah" name="ubuntu/android_hardware_ti_omap4-aah" />
+  <project path="hardware/ti/omap4xxx" name="ubuntu/android_hardware_ti_omap4xxx" />
+  <project path="libnativehelper" name="ubuntu/android_libnativehelper" />
+
+  <project path="prebuilts/clang/linux-x86/3.1" name="ubuntu/prebuilts_clang_linux-x86_3.1" />
+  <project path="prebuilts/clang/linux-x86/host/3.4" name="ubuntu/prebuilts_clang_linux-x86_host_3.4" />
+  <project path="prebuilts/clang/linux-x86/host/3.5" name="ubuntu/prebuilts_clang_linux-x86_host_3.5" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.8" 
+           name="ubuntu/prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.8" />
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" 
+           name="ubuntu/prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" 
+           name="ubuntu/prebuilts_gcc_linux-x86_arm_arm-eabi-4.8" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" 
+           name="ubuntu/prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.8" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.6" 
+           name="ubuntu/prebuilts_gcc_linux-x86_host_x86_64-linux-glibc2.11-4.6" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" 
+           name="ubuntu/prebuilts_gcc_linux-x86_host_x86_64-linux-glibc2.11-4.8" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" 
+           name="ubuntu/prebuilts_gcc_linux-x86_host_x86_64-w64-mingw32-4.8" />
+  <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.8" 
+           name="ubuntu/prebuilts_gcc_linux-x86_x86_x86_64-linux-android-4.8" />
+  <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" 
+           name="ubuntu/prebuilts_gcc_linux-x86_x86_x86_64-linux-android-4.9" />
+
+  <project path="prebuilts/devtools" name="ubuntu/prebuilts_devtools" />
+  <project path="prebuilts/libs/libedit" name="ubuntu/prebuilts_libs_libedit" />
+  <project path="prebuilts/maven_repo/android" name="ubuntu/prebuilts_maven_repo_android" />
+  <project path="prebuilts/misc" name="ubuntu/prebuilts_misc" />
+  <project path="prebuilts/ndk" name="ubuntu/prebuilts_ndk" />
+  <project path="prebuilts/python/linux-x86/2.7.5" name="ubuntu/prebuilts_python_linux-x86_2.7.5" />
+  <project path="prebuilts/qemu-kernel" name="ubuntu/prebuilts_qemu-kernel" />
+  <project path="prebuilts/tools" name="ubuntu/prebuilts_tools"  />
+
+  <project path="sdk" name="ubuntu/android_sdk" />
+  <project path="system/extras" name="ubuntu/android_system_extras" />
+  <project path="system/keymaster" name="ubuntu/android_system_keymaster" />
+  <project path="system/media" name="ubuntu/android_system_media" />
+  <project path="system/netd" name="ubuntu/android_system_netd" />
+  <project path="system/qcom" name="ubuntu/android_system_qcom" />
+  <project path="system/security" name="ubuntu/android_system_security" />
+  <project path="system/vold" name="ubuntu/android_system_vold" />
+  <project path="tools/external/fat32lib" name="ubuntu/tools_external_fat32lib" />
+  <project path="vendor/cm" name="ubuntu/android_vendor_cm" />
+  <project path="bootable/recovery" name="ubuntu/android_bootable_recovery" /> 
+  <project path="vendor/sony/system/timekeep" name="ubuntu/android_vendor_sony_system_timekeep" />
 
   <!-- Ubuntu specific repos -->
+  <project path="external/busybox" name="ubuntu/android_external_busybox" />
+  <project path="external/pigz" name="ubuntu/android_external_pigz" />
+  <project path="external/koush/Superuser" name="ubuntu/Superuser" />
+  <project path="external/gpg" name="ubuntu/android_external_gpg" />
+  <project path="ubuntu/assets" name="ubuntu/ubuntu_assets" />
+  <project path="ubuntu/platform-api" name="ubuntu/ubuntu_platform-api" />
+  <project path="ubuntu/upstart-property-watcher" name="ubuntu/upstart-property-watcher" />
+  <project path="ubuntu/prebuilts" name="ubuntu/ubuntu_prebuilts" />
 
-  <project path="external/busybox" name="CyanogenMod/android_external_busybox" revision="refs/heads/personal/w-ondra/phablet-5.1.1_r5" />
-  <project path="external/pigz" name="CyanogenMod/android_external_pigz" revision="refs/heads/cm-12.1" />
-  <project path="external/koush/Superuser" name="CyanogenMod/Superuser" revision="refs/heads/cm-12.0"/>
-  <project path="external/gpg" name="aosp/platform/external/gpg" revision="refs/heads/master" />
-  <project path="ubuntu/assets" name="ubuntu/assets" revision="refs/heads/master" />
-  <project path="ubuntu/libhybris" name="cancro-ubt/libhybris" remote="ubp" />
-  <project path="ubuntu/libhybris-prebuilt" name="ubuntu/libhybris-prebuilt" revision="refs/heads/personal/w-ondra/phablet-5.x" />
-  <project path="ubuntu/platform-api" name="ubuntu/platform-api" revision="refs/heads/personal/w-ondra/phablet-5.x" />
-  <project path="ubuntu/upstart-property-watcher" name="ubuntu/upstart-property-watcher" revision="refs/heads/personal/w-ondra/phablet-5.x" />
-  <project path="ubuntu/prebuilts" name="ubuntu/prebuilts" revision="refs/heads/master" />
 </manifest>
