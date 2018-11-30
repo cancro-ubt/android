@@ -53,6 +53,7 @@ revision="refs/tags/android-5.1.1_r26" />
 
   <project path="ubuntu/libhybris" name="cancro-ubt/libhybris" remote="ubp" />
   <project path="hardware/libhardware" name="cancro-ubt/android_hardware_libhardware" groups="pdk" remote="ubp" />
+  <project path="bootable/recovery" name="ubports/android_bootable_recovery" remote="ubp" />
 
 
   <project path="abi/cpp" name="ubuntu/android_abi_cpp" />
@@ -220,7 +221,6 @@ revision="refs/tags/android-5.1.1_r26" />
   <project path="system/vold" name="ubuntu/android_system_vold" />
   <project path="tools/external/fat32lib" name="ubuntu/tools_external_fat32lib" />
   <project path="vendor/cm" name="ubuntu/android_vendor_cm" />
-  <project path="bootable/recovery" name="ubuntu/android_bootable_recovery" /> 
   <project path="vendor/sony/system/timekeep" name="ubuntu/android_vendor_sony_system_timekeep" />
 
   <!-- Ubuntu specific repos -->
